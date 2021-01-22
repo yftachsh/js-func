@@ -1,7 +1,7 @@
 const memoize = method => (
         (cache = {}) =>
-            argument =>
-                cache[argument] || (cache[argument] = method(argument))
+            (...arguments) =>
+                cache[JSON.stringify(arguments)] || (cache[JSON.stringify(arguments)] = method(...arguments))
     )();
 
 module.exports = memoize;
