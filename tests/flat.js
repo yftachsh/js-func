@@ -1,18 +1,32 @@
+const assert = require('assert');
 const flat = require('../arrays/flat');
 
-const testArray = [
-    'a',
-    'b',
-    [
-        'c',
+module.exports = () => {
+    const testArray = [
+        'a',
+        'b',
         [
-            'd',
-            'e',
+            'c',
             [
-                'f'
+                'd',
+                'e',
+                [
+                    'f'
+                ]
             ]
         ]
     ]
-]
 
-console.log(flat(testArray));
+    const expectedResult = [
+        'a',
+        'b',
+        'c',
+        'd',
+        'e',
+        'f'
+    ];
+
+    const flatArray = flat(testArray);
+
+    assert.deepStrictEqual(flatArray, expectedResult, 'flat array method failed');
+}

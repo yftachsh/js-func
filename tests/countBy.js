@@ -1,17 +1,19 @@
 const assert = require('assert');
 const countBy = require('../arrays/countBy');
 
-const propertyName = 'a';
-const testArray = [
-    { a: 'a' },
-    { a: 'a' },
-    { b: 'b' },
-    { a: 'a' },
-    { d: 'd' },
-]
+module.exports = () => {
+    const propertyName = 'a';
+    const testArray = [
+        { a: 'a' },
+        { a: 'a' },
+        { b: 'b' },
+        { a: 'a' },
+        { d: 'd' },
+    ]
 
-const expectedCount = 3;
+    const expectedCount = 3;
 
-const count = countBy(testArray, propertyName);
+    const count = countBy(testArray, propertyName);
 
-assert.strictEqual(count, expectedCount, 'countBy method failed');
+    assert.strictEqual(count, expectedCount, 'countBy method failed');
+}
