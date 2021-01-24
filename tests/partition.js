@@ -1,14 +1,31 @@
+const assert = require('assert');
 const partition = require('../arrays/partition');
 
-const criteria = n => n % 2;
+module.exports = () => {
+    const criteria = n => n % 2;
 
-const testArray = [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-]
+    const testArray = [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+    ]
 
-console.log(partition(testArray, criteria));
+    const expectedPartition= [
+        [
+            1,
+            3,
+            5
+        ],
+        [
+            2,
+            4,
+            6
+        ]
+    ]
+
+    const partitionResult = partition(testArray, criteria);
+    assert.deepStrictEqual(partitionResult, expectedPartition, 'Failed to partition elements properly');
+}
