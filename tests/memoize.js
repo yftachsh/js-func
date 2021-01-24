@@ -1,22 +1,31 @@
+const assert = require('assert');
+const { performance } = require('perf_hooks');
 const memoize = require('../functions/memoize');
 
-const testArgument = 'test';
+module.exports = () => {
+    const testArgument = 'test';
 
-const testMethod = memoize((value1, value2) => {
-    // Artificial delay - method should only be called once for the same argument
-    for (let i = 0; i < 1000000000; i++);
+    const testMethod = memoize((value1, value2) => {
+        // Artificial delay - method should only be called once for the same argument
+        for (let i = 0; i < 1000000000; i++);
 
-    return `nice ${value1} ${value2}`;
-})
+        return `nice ${value1} ${value2}`;
+    })
 
-console.time('result1');
-let result1 = testMethod(testArgument, testArgument);
-console.log(result1);
-console.timeEnd('result1');
+    const result1_start = performance.now();
+    testMethod(testArgument, testArgument);
+    const result1_end = performance.now();
 
-console.log('\n--------------------------\n');
+    const result1_interval = result1_end - result1_start;
 
-console.time('result2');
-let result2 = testMethod(testArgument, testArgument);
-console.log(result2);
-console.timeEnd('result2');
+    const result2_start = performance.now();
+    testMethod(testArgument, testArgument);
+    const result2_end = performance.now();
+
+    const result2_interval = result2_end - result2_start;
+
+    assert.ok(
+        (result1_interval > (result2_interval * 100)),
+        'Result wasn\'t properly memoized'
+)
+}
