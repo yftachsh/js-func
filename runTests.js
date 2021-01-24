@@ -1,6 +1,6 @@
 // Utils
-const Logger = require('./logger');
-const Timer = require('./timer');
+const Logger = require('./utils/logger');
+const Timer = require('./utils/timer');
 
 // Test imports
 const test_cherryPick = require('./tests/cherryPick');
