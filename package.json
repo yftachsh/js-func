@@ -1,27 +1,12 @@
 {
   "name": "js-func",
   "version": "0.0.0",
-  "description": "Various useful methods in javascript",
+  "description": "Collection of useful JavaScript functions",
   "main": " ",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/yftachsh/js-func.git"
-  },
-  "keywords": [
-    "javascript"
-  ],
-  "author": "yftachsh",
+  "repository": "git@github.com:yftachsh/js-func.git",
+  "author": "Yftach Shmaryahu <yftachshm@gmail.com>",
   "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/yftachsh/js-func/issues"
-  },
-  "homepage": "https://github.com/yftachsh/js-func#readme",
-  "directories": {
-    "test": "tests"
-  },
+  "private": false,
   "dependencies": {
     "assert": "^2.0.0",
     "colors": "^1.4.0"
