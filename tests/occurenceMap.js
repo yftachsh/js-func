@@ -1,5 +1,5 @@
 const assert = require('assert');
-const occurenceMap = require('../arrays/occurenceMap');
+const occurenceMap = require('../src/arrays/occurenceMap');
 
 module.exports = () => {
     const testArray = [

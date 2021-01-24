@@ -1,5 +1,5 @@
 const assert = require('assert');
-const countBy = require('../arrays/countBy');
+const countBy = require('../src/arrays/countBy');
 
 module.exports = () => {
     const propertyName = 'a';

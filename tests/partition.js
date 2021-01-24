@@ -1,5 +1,5 @@
 const assert = require('assert');
-const partition = require('../arrays/partition');
+const partition = require('../src/arrays/partition');
 
 module.exports = () => {
     const criteria = n => n % 2;

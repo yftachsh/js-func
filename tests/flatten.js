@@ -1,5 +1,5 @@
 const assert = require('assert');
-const flatten = require('../objects/flatten');
+const flatten = require('../src/objects/flatten');
 
 module.exports = () => {
     const testObject = {

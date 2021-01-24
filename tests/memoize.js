@@ -1,6 +1,6 @@
 const assert = require('assert');
 const { performance } = require('perf_hooks');
-const memoize = require('../functions/memoize');
+const memoize = require('../src/functions/memoize');
 
 module.exports = () => {
     const testArgument = 'test';

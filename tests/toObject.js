@@ -1,5 +1,5 @@
 const assert = require('assert');
-const toObject = require('../arrays/toObject');
+const toObject = require('../src/arrays/toObject');
 
 module.exports = () => {
     const testArray = [

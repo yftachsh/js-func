@@ -1,5 +1,5 @@
 const assert = require('assert');
-const range = require('../arrays/range');
+const range = require('../src/arrays/range');
 
 module.exports = () => {
     const start = 5;

@@ -1,5 +1,5 @@
 const assert = require('assert');
-const flat = require('../arrays/flat');
+const flat = require('../src/arrays/flat');
 
 module.exports = () => {
     const testArray = [

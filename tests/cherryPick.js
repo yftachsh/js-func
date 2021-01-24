@@ -1,5 +1,5 @@
 const assert = require('assert');
-const cherryPick = require('../objects/cherryPick');
+const cherryPick = require('../src/objects/cherryPick');
 
 module.exports = () => {
     const testObject = {
