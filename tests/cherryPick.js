@@ -21,4 +21,4 @@ const expectedResult = {
 
 let pickedObject = cherryPick(testObject, testProperties);
 
-assert.deepStrictEqual(pickedObject, expectedResult, 'cherryPick method failed')
+assert.deepStrictEqual(pickedObject, expectedResult, 'cherryPick method failed');
