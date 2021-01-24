@@ -1,3 +1,4 @@
+const assert = require('assert');
 const countBy = require('../arrays/countBy');
 
 const propertyName = 'a';
@@ -9,4 +10,8 @@ const testArray = [
     { d: 'd' },
 ]
 
-console.log(countBy(testArray, propertyName));
+const expectedCount = 3;
+
+const count = countBy(testArray, propertyName);
+
+assert.strictEqual(count, expectedCount, 'countBy method failed');
