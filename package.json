@@ -7,6 +7,9 @@
   "author": "Yftach Shmaryahu <yftachshm@gmail.com>",
   "license": "Apache-2.0",
   "private": false,
+  "scripts": {
+      "test": "node runTests.js"
+  },
   "dependencies": {
     "assert": "^2.0.0",
     "colors": "^1.4.0"

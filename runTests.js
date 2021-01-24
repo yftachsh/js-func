@@ -3,36 +3,18 @@ const Logger = require('./utils/logger');
 const Timer = require('./utils/timer');
 
 // Test imports
-const test_cherryPick = require('./tests/cherryPick');
-const test_flat = require('./tests/flat');
-const test_flatten = require('./tests/flatten');
-const test_memoize = require('./tests/memoize');
-const test_occurenceMap = require('./tests/occurenceMap');
-const test_partition = require('./tests/partition');
-const test_range = require('./tests/range');
-const test_toObject = require('./tests/toObject');
-
-const testList = {
-    test_cherryPick,
-    test_flat,
-    test_flatten,
-    test_memoize,
-    test_occurenceMap,
-    test_partition,
-    test_range,
-    test_toObject,
-}
+const tests = require('./tests');
 
 
 const runTests = () => {
     const logger = new Logger();
 
-    const testMethodNames = Object.keys(testList);
+    const testMethodNames = Object.keys(tests);
 
     console.log('-'.repeat(50));
 
     let success = testMethodNames.filter(testMethodName => {
-        testMethod = testList[testMethodName];
+        testMethod = tests[testMethodName];
 
         const timer = new Timer();
 
