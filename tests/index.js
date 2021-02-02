@@ -6,6 +6,7 @@ const test_occurenceMap = require('./occurenceMap');
 const test_partition = require('./partition');
 const test_range = require('./range');
 const test_toObject = require('./toObject');
+const test_unique = require('./unique');
 
 module.exports = {
     test_cherryPick,
@@ -16,4 +17,5 @@ module.exports = {
     test_partition,
     test_range,
     test_toObject,
+    test_unique,
 };
