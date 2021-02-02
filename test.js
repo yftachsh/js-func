@@ -29,7 +29,7 @@ const runTests = () => {
             return false;
         } finally {
             timer.end();
-            logger.info(`${testMethodName} ran for ${timer.finalize()} seconds`);
+            logger.info(`${testMethodName} ran for ${timer.finalize()} milliseconds`);
             console.log('-'.repeat(50));
         }
     });
