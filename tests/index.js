@@ -7,6 +7,8 @@ const test_partition = require('./partition');
 const test_range = require('./range');
 const test_toObject = require('./toObject');
 const test_unique = require('./unique');
+const test_timedMemoize = require('./timedMemoize');
+const test_sleep = require('./sleep');
 
 module.exports = {
     test_cherryPick,
@@ -18,4 +20,6 @@ module.exports = {
     test_range,
     test_toObject,
     test_unique,
+    test_timedMemoize,
+    test_sleep,
 };
