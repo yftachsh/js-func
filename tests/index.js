@@ -9,17 +9,19 @@ const test_toObject = require('./toObject');
 const test_unique = require('./unique');
 const test_timedMemoize = require('./timedMemoize');
 const test_sleep = require('./sleep');
+const test_pipe = require('./pipe');
 
 module.exports = {
+    test_occurenceMap,
+    test_timedMemoize,
     test_cherryPick,
-    test_flat,
+    test_partition,
+    test_toObject,
     test_flatten,
     test_memoize,
-    test_occurenceMap,
-    test_partition,
-    test_range,
-    test_toObject,
     test_unique,
-    test_timedMemoize,
+    test_range,
     test_sleep,
+    test_flat,
+    test_pipe,
 };
